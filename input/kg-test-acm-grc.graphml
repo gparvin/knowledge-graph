@@ -61,7 +61,7 @@
       <data key="kind">policy</data>
       <data key="group">policy.open-cluster-management.io</data>
       <data key="onHub">true</data>
-      <data key="onManaged">true</data>
+      <data key="onManaged">false</data>
     </node>
     <node id="8">
       <data key="entity">API</data>
@@ -97,6 +97,15 @@
       <data key="kind">Object</data>
       <data key="group">Any</data>
       <data key="onHub">true</data>
+      <data key="onManaged">true</data>
+    </node>
+    <node id="12">
+      <data key="entity">IntermediateResource</data>
+      <data key="name">Policy</data>
+      <data key="type">Kubernetes</data>
+      <data key="kind">policy</data>
+      <data key="group">policy.open-cluster-management.io</data>
+      <data key="onHub">false</data>
       <data key="onManaged">true</data>
     </node>
     <node id="18">
@@ -165,6 +174,12 @@
       <data key="verb">CREATES</data>
     </edge>
     <edge source="3" target="7">
+      <data key="verb">UPDATES</data>
+    </edge>
+    <edge source="3" target="12">
+      <data key="verb">CREATES</data>
+    </edge>
+    <edge source="3" target="12">
       <data key="verb">UPDATES</data>
     </edge>
     <edge source="6" target="19">
